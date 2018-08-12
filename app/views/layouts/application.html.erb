@@ -12,7 +12,7 @@
   <%= render 'layouts/menu' %>
  <header>
  <% if user_signed_in? %>
-  <img src='assets/header.png' alt="" class='img-fluid'>
+   <%= image_tag("header.png", alt: "YodaTeam", class: 'img-fluid') %>
  <% else %>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -22,13 +22,13 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('/assets/slider1.png')">
+          <div class="carousel-item active slider1">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('/assets/slider2.png')">
+          <div class="carousel-item slider2">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
@@ -51,9 +51,9 @@
         <%= yield %>
       </div>
     </section>
-    <footer class="bg-dark">
+    <footer class="bg-dark footer_possition">
        <div class="container">
-          <img src='assets/footer.png' class='img-fluid'>
+          <%= image_tag("footer.png", alt: "YodaTeam", class: 'img-fluid') %>
           <p class="m-0 text-center text-white">Copyright &copy; Netguru 2018</p>
        </div>
     </footer>
